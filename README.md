@@ -13,7 +13,7 @@ originally given values. This is a stopping condition as the values are not elig
 or equality assert statements and would not flip the critical condition.
 
 ### Compile and Run
-- Run the program as `python Automate.py`
+- Run the program as `python automate.py`
 - The program takes the following inputs:
 	1. Two absolute paths for the two different compiled versions of code.
 	2. The number of variables involved in the critical subexpression used for condition check.
@@ -34,16 +34,16 @@ as to flip the critical condition as we don't know any thing about the floating-
  - Compile the file `quadratic.c` twice - once with macro `TYPE` defined as `float` and once as `double`.
  - This compilation will require a minor change specified above to the code as the change in precision can only be made by changing the data type of numbers.
  - The inputs obtained from Z3 are  - `0.5, 0.125, 0.0078125`
- - Input these values after running `Automate.py`
+ - Input these values after running `automate.py`
 
 2. Using `serialized_sum.c` for displaying CFI due to change in optimization level:
  - Compile the file `serialized_sum.c` twice - once with optimization level -O0(`gcc -O0 -o ss0.exe serialized_sum.c`) 
    and once as -O3(`gcc -O3 -o ss3.exe serialized_sum.c`)
  - The inputs obtained from Z3 are  - `1.0 1.0`
- - Input these values after running `Automate.py`
+ - Input these values after running `automate.py`
 
  3. Using `hello.c` for displaying CFI due to change in precision:
  - Compile the file `hello.c` twice - once with macro `TYPE` defined as `float` and once as `double`.
  - This compilation will require a minor change specified above to the code as the change in precision can only be made by changing the data type of numbers.
  - The inputs obtained from Z3 are  - `0.5, 1.0`
- - Input these values after running `Automate.py`
+ - Input these values after running `automate.py`
